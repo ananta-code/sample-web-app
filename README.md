@@ -8,3 +8,8 @@ docker file:<br>
   3 ADD ./target/sample-web-app.war /usr/local/tomcat/webapps/sample-web-app.war <br>
   4 EXPOSE 8080 <br>
   5 CMD ["catalina.sh","run"]
+<br>
+build the docker image:<br>
+docker build -t webappimage .<br>
+run the image:<br>
+docker run -p 8088:8080 --name -d tomcatsample1 webappimage
