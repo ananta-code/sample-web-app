@@ -13,3 +13,7 @@ build the docker image:<br>
 docker build -t webappimage .<br>
 run the image:<br>
 docker run -p 8088:8080 --name -d tomcatsample1 webappimage
+
+
+run with Logs:
+CMD /usr/local/tomcat/bin/catalina.sh start && tail -f /usr/local/tomcat/logs/catalina.out
